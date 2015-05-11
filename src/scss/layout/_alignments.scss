@@ -1,0 +1,6 @@
+.align-left {
+	@include create-alignment(left, 0 $alignment-margin $alignment-margin 0);
+}
+.align-right {
+	@include create-alignment(right, 0 0 $alignment-margin $alignment-margin);
+}

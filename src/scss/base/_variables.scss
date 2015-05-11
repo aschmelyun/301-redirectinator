@@ -1,0 +1,120 @@
+// = Responsive breakpoints
+$break-mobile:                  480px;
+$break-tablet:                  768px;
+$break-desktop-small:           992px;
+$break-desktop-large:           1200px;
+
+// = Main colors used throughout the framework
+$color-primary:                 #48CFAD;
+$color-primary-alt:             #37BC9B;
+
+$color-secondary:               #CCD1D9;
+$color-secondary-alt:           #AAB2BD;
+
+$color-error:                   #ED5565;
+$color-error-alt:               #DA4453;
+
+$color-watch:                   #FFCE54;
+$color-watch-alt:               #FCBB42;
+
+$color-success:                 #A0D468;
+$color-success-alt:             #8CC152;
+
+$white:                         #FFFFFF;
+
+// = Font families and styles
+$font-family:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-main:                14px;
+$line-height-main:              20px;
+
+// = Grids and rows
+$row-vertical-spacing:          36px;
+
+// = Alignment ( objects floated right/left )
+$alignment-margin:              8px;
+
+// = Heading typography
+$heading-margin:                4px 0 12px;
+
+// = Alerts
+$alert-border-radius:           3px;
+$alert-padding:                 24px 12px;
+$alert-font-size:               15px;
+
+// = Animations
+$modal-height:                  100%;
+$modal-width:                   100%;
+$modal-background:              rgba(0, 0, 0, 0.85);
+$modal-window-height:           auto;
+$modal-window-width:            50%;
+$modal-window-top:              128px;
+$modal-window-margin:           0 auto;
+$modal-window-border-radius:    7px;
+$modal-window-background:       $white;
+$modal-window-text-area-height: 360px;
+
+// = Buttons
+$button-padding:                6px 16px;
+$button-font-size:              13px;
+$button-font-weight:            bold;
+$button-border-radius:          3px;
+$button-text-decoration:        none;
+$button-text-shadow:            0 1px 1px rgba( 0, 0, 0, 0.25 );
+
+$button-mini-padding:           2px 6px;
+$button-mini-font-size:         11px;
+
+$button-small-padding:          4px 10px;
+$button-small-font-size:        11px;
+
+$button-large-padding:          10px 24px;
+$button-large-font-size:        15px;
+
+$button-huge-padding:           16px 32px;
+$button-huge-font-size:         17px;
+
+// = CTAs
+$intro-padding:                 128px 0;
+$intro-text-shadow:             0 1px 1px rgba(0, 0, 0, 0.35);
+$intro-background-image:        'https://ununsplash.imgix.net/reserve/xpdPwXTASnOUXFpIPgDs_IMG_1460_edt.jpg?q=75&fm=jpg&s=14f08c0d844035df3c9fea8705d4c38c';
+$intro-background-repeat:       no-repeat;
+$intro-background-position:     center center;
+$intro-gradient-from:           #ccc;
+$intro-gradient-to:             #999;
+
+$cta-padding:                   1em 0;
+
+// = Forms and inputs
+$input-padding:                 6px 8px;
+$input-margin:                  0 0 8px;
+$input-border-radius:           3px;
+
+$input-submit-padding:          10px 24px;
+$input-submit-font-size:        15px;
+$input-submit-font-weight:      bold;
+$input-submit-border-radius:    3px;
+$input-submit-text-shadow:      0 1px 1px rgba( 0, 0, 0, 0.25 );
+
+$input-label-font-size:         ($font-size-main * 0.75);
+$input-label-font-weight:       700;
+$input-label-text-transform:    uppercase;
+$input-label-color:             darken($color-secondary-alt, 15%);
+
+// = Images and media
+$thumbnail-background:          $white;
+$thumbnail-padding:             5px;
+$thumbnail-border-radius:       3px;
+
+$thumbnail-bordered-border:     1px solid $color-secondary;
+
+// = Navigation
+$navigation-padding:            12px 32px 12px 0;
+$navigation-border:             1px solid $color-secondary;
+$navigation-font-size:          1.15em;
+$navigation-font-weight:        normal;
+$navigation-font-color:         $color-secondary-alt;
+$navigation-font-color-hover:   $color-primary;
+$navigation-font-color-active:  $color-primary;
+
+// = Tables
+$table-padding:                 12px 16px;

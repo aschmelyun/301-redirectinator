@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The 301 Redirectinator | Convert 301 entries to .htaccess code</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <div class="wrapper fixed padding-bottom">
+        <div class="row spaced">
+            <table id="redirect_table">
+                <tr>
+                    <th>Redirect From URL</th>
+                    <th>Redirect To URL</th>
+                    <th>Type</th>
+                </tr>
+            </table>
+        </div>
+        <div class="row spaced inputs">
+            <div class="column span5">
+                <input type="text" id="url_from" placeholder="Redirect From URL" />
+            </div>
+            <div class="column span5">
+                <input type="text" id="url_to" placeholder="Redirect To URL" />
+            </div>
+            <div class="column span2">
+                <select id="redirect_type">
+                	<option selected value="301">301</option>
+                	<option value="302">302</option>
+                	<option value="404">404</option>
+                </select>
+            </div>
+        </div>
+        <div class="row spaced">
+            <div class="column span6">
+                <a class="button large secondary" href="#" id="bulk_add_urls">Bulk Add URLs</a>
+                <a class="button large secondary" href="#" id="import_csv">Import Spreadsheet</a>
+            </div>
+            <div class="column span6 text-right">
+                <a class="button large primary" href="#" id="add_redirect">Add Redirect</a>
+            </div>
+        </div>
+    </div>
+    <div class="cta background-secondary sticky">
+        <div class="wrapper fixed">
+            <div class="row">
+                <div class="column span12 text-center">
+                    <span>All finished adding redirects?</span>
+                    <a class="button success large" id="export_htaccess">Export .htaccess code <i class="fa fa-lg fa-external-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" style="display:none;">
+    	<div class="window">
+    	    <div class="wrapper fluid">
+    	        <div class="row spaced">
+    	            <textarea id="htaccess_code"></textarea>
+    	        </div>
+    	        <div class="row spaced text-right">
+    	            <a href="#" class="button secondary large" id="close_modal">Close Window</a>
+    	        </div>
+    	    </div>
+    	</div>
+    </div>
+    <script type="text/javascript" src="assets/js/main.min.js"></script>
+</body>
+</html>

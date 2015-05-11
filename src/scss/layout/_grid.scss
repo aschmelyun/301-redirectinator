@@ -1,0 +1,73 @@
+// ========================
+// = Grid System 
+// ========================
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  
+  &.padding-bottom {
+    padding: 0 0 64px;
+  }
+  
+  &.fixed {
+  	width: 100%;
+  	
+  	@include scale-to(desktop-small) {
+  		max-width: 960px;
+  	}
+  	
+  	@include scale-to(desktop-large) {
+  		max-width: 1160px;
+  	}
+  }
+  
+  &.fluid {
+  	width: 100%;
+  	
+  	@include scale-to(desktop-small) {
+  		width: 94%;
+  	}
+  	
+  	@include scale-to(desktop-large) {
+  		width: 90%;
+  	}
+  }
+}
+
+.row {
+	overflow: auto;
+	width: 100%;
+	
+	&.spaced {
+		margin: $row-vertical-spacing 0;
+	}
+	
+	&.no-gutter {
+		
+		.column {
+			margin: 0 !important;
+		}
+		
+		@for $i from 1 through 12 {
+			.span#{$i} {
+				@include make-columns-no-gutter($i, 12);
+			}
+		}
+	}
+}
+
+.column {
+  float: left;
+  min-height: 1px;
+  
+  &+& {
+    margin-left: 4%;
+  }
+}
+
+@for $i from 1 through 12 {
+  .span#{$i} {
+  	@include make-columns($i, 12);
+ 	}
+}

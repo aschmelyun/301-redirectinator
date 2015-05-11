@@ -1,0 +1,47 @@
+.alert {
+	width: 100%;
+	border-radius: $alert-border-radius;
+	padding: $alert-padding;
+	font-size: $alert-font-size;
+	
+	&.primary {
+		@include alert-style($color-primary-alt, $color-primary);
+		
+			& a {
+				@include alert-link($color-primary-alt);
+			}
+	}
+	
+	&.secondary {
+		@include alert-style($color-secondary-alt, $color-secondary);
+		
+			& a {
+				@include alert-link($color-secondary-alt);
+			}
+	}
+	
+	&.error {
+		@include alert-style($color-error-alt, $color-error);
+		
+			& a {
+				@include alert-link($color-error-alt);
+			}
+	}
+	
+	&.watch {
+		@include alert-style($color-watch-alt, $color-watch);
+		
+			& a {
+				@include alert-link($color-watch-alt);
+			}
+	}
+	
+	&.success {
+		@include alert-style($color-success-alt, $color-success);
+		
+			& a {
+				@include alert-link($color-success-alt);
+			}
+	}
+	
+}

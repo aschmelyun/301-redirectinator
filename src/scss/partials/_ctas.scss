@@ -1,0 +1,34 @@
+.intro {
+	text-align: center;
+	color: $white;
+	padding: $intro-padding;
+	text-shadow: $intro-text-shadow;
+	
+	&.background-image {
+		background: url($intro-background-image) $intro-background-repeat $intro-background-position;
+		background-size: cover;
+	}
+	
+	&.background-gradient {
+		background: linear-gradient($intro-gradient-from, $intro-gradient-to);
+	}
+}
+
+.cta {
+	padding: $cta-padding;
+	
+	&.background-primary {
+		@include create-cta( $color-primary, $color-primary-alt );
+	}
+	
+	&.background-secondary {
+		@include create-cta( $color-secondary, $color-secondary-alt );
+	}
+	
+	&.sticky {
+	  width: 100%;
+	  position: fixed;
+	  bottom: 0;
+	}
+	
+}

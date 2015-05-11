@@ -1,0 +1,22 @@
+.modal {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  height: $modal-height;
+  width: $modal-width;
+  background: $modal-background;
+  
+  .window {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: $modal-window-top;
+    margin: $modal-window-margin;
+    height: $modal-window-height;
+    width: $modal-window-width;
+    background: $modal-window-background;
+    border-radius: $modal-window-border-radius;
+  }
+}

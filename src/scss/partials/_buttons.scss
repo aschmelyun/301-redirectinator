@@ -1,0 +1,50 @@
+.button {
+	display: inline-block;
+	border-bottom: 1px solid;
+	padding: $button-padding;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	border-radius: $button-border-radius;
+	text-decoration: $button-text-decoration;
+	text-shadow: $button-text-shadow;
+	
+	&.primary {
+		@include button-style($white, $color-primary, $color-primary-alt);
+	}
+	
+	&.secondary {
+		@include button-style($white, $color-secondary, $color-secondary-alt);
+	}
+	
+	&.error {
+		@include button-style($white, $color-error, $color-error-alt);
+	}
+	
+	&.watch {
+		@include button-style($white, $color-watch, $color-watch-alt);
+	}
+	
+	&.success {
+		@include button-style($white, $color-success, $color-success-alt);
+	}
+	
+	&.outline {
+		@include button-style($white, 'none', $white);
+	}
+	
+	&.mini {
+		@include button-size($button-mini-padding, $button-mini-font-size);
+	}
+	
+	&.small {
+		@include button-size($button-small-padding, $button-small-font-size);
+	}
+	
+	&.large {
+		@include button-size($button-large-padding, $button-large-font-size);
+	}
+	
+	&.huge {
+		@include button-size($button-huge-padding, $button-huge-font-size);
+	}
+}

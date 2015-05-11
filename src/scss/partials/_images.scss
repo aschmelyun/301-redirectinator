@@ -1,0 +1,20 @@
+img {
+	max-width: 100%;
+}
+img.thumbnail {
+	background: $thumbnail-background;
+	padding: $thumbnail-padding;
+	border-radius: $thumbnail-border-radius;
+	
+	&.bordered {
+		border: $thumbnail-bordered-border;
+	}
+	
+	&.plain {
+		border: none;
+		padding: 0;
+	}
+}
+img.background {
+	width: 100%;
+}

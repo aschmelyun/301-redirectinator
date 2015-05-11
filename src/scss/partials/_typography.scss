@@ -1,0 +1,25 @@
+body {
+	font-size: $font-size-main;
+	line-height: $line-height-main;
+}
+@for $i from 1 through 6 {
+	h#{$i} {
+		@include create-heading($i);
+	}
+}
+$text-alignments: left, right, center;
+@each $text-alignment in $text-alignments {
+	.text-#{$text-alignment} {
+		text-align: $text-alignment;
+	}
+}
+p {
+  line-height: 1.5em;
+  margin: 2em 0;
+}
+strong, b {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
