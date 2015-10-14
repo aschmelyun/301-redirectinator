@@ -83,20 +83,45 @@ $('#bulk_add_urls').click(function(e) {
    
 });
 
+$('#import_csv').click(function(e) {
+    e.preventDefault();
+
+    $('#modal_csv').fadeIn(250);
+});
+
+$('#parse_csv').click(function(e) {
+    e.preventDefault();
+
+    var redirect_type = $('#redirect_type').val();
+    var csv_lines = $('#csv_code').val().split("\n");
+    $.each(csv_lines, function(i, item) {
+        var csv_items = csv_lines[i].split(',');
+
+        $('#redirect_table').append('<tr><td>' + csv_items[0] + '</td><td>' + csv_items[1] + '</td><td>' + redirect_type + '</td></tr>');
+        redirects.push({
+            "redirect_from": csv_items[0],
+            "redirect_to": csv_items[1],
+            "type": redirect_type
+        });
+    });
+
+    $('.modal').fadeOut(250);
+});
+
 $('#export_htaccess').click(function(e) {
     e.preventDefault();
     
-    console.log(redirects);
+    //console.log(redirects);
     $('#htaccess_code').html('');
     
     $.each(redirects, function(i, item) {
        $('#htaccess_code').append('Redirect ' + redirects[i].type + ' ' + redirects[i].redirect_from + ' ' + redirects[i].redirect_to + "\r\n"); 
     });
     
-    $('.modal').fadeIn(250);
+    $('#modal_htaccess').fadeIn(250);
 });
 
-$('#close_modal').click(function(e) {
+$('.close-modal').click(function(e) {
     e.preventDefault();
     
     $('.modal').fadeOut(250);

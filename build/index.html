@@ -34,7 +34,7 @@
         <div class="row spaced">
             <div class="column span6">
                 <a class="button large secondary" href="#" id="bulk_add_urls">Bulk Add URLs</a>
-                <a class="button large secondary" href="#" id="import_csv">Import Spreadsheet</a>
+                <a class="button large secondary" href="#" id="import_csv">Import CSV</a>
             </div>
             <div class="column span6 text-right">
                 <a class="button large primary" href="#" id="add_redirect">Add Redirect</a>
@@ -51,17 +51,30 @@
             </div>
         </div>
     </div>
-    <div class="modal" style="display:none;">
+    <div class="modal" id="modal_htaccess" style="display:none;">
     	<div class="window">
     	    <div class="wrapper fluid">
     	        <div class="row spaced">
     	            <textarea id="htaccess_code"></textarea>
     	        </div>
     	        <div class="row spaced text-right">
-    	            <a href="#" class="button secondary large" id="close_modal">Close Window</a>
+    	            <a href="#" class="button secondary large close-modal">Close Window</a>
     	        </div>
     	    </div>
     	</div>
+    </div>
+    <div class="modal" id="modal_csv" style="display:none;">
+        <div class="window">
+            <div class="wrapper fluid">
+                <div class="row spaced">
+                    <textarea id="csv_code">Redirect from URL,Redirect to URL</textarea>
+                </div>
+                <div class="row spaced text-right">
+                    <a href="#" class="button secondary large close-modal">Close Window</a>
+                    <a href="#" class="button primary large" id="parse_csv">Parse CSV</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="assets/js/main.min.js"></script>
 </body>

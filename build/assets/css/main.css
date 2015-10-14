@@ -254,7 +254,7 @@ label {
 .inputs textarea {
   height: 96px; }
 
-textarea#htaccess_code {
+textarea#htaccess_code, textarea#csv_code {
   height: 360px; }
 
 .navigation {
